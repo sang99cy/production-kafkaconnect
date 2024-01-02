@@ -1,0 +1,19 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+  "table.name.format": "test2",
+  "connection.password": "password",
+  "tasks.max": "1",
+  "topics": "dr-hci-ocp-uat.orders.test1",
+  "auto.evolve": "true",
+  "connection.user": "postgres",
+  "db.timezone": "Asia/Ho_Chi_Minh",
+  "value.converter.schemas.enable": "true",
+  "name": "postgre-sink-jdbc-orders",
+  "auto.create": "true",
+  "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+  "connection.url": "jdbc:postgresql://db:5433/orders",
+  "insert.mode": "upsert",
+  "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+  "pk.mode": "record_key",
+  "pk.fields": "id"
+}

@@ -1,0 +1,1 @@
+<!-- Kịch bản 2 đồng bộ dữ liệu dữ database ( bảng đích được tạo tự động) -->

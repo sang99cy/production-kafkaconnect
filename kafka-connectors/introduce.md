@@ -1,0 +1,1 @@
+`thư mục kafka-connectors lưu tất cả các config connector của external system`

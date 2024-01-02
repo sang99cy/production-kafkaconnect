@@ -1,0 +1,16 @@
+{
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "incrementing.column.name": "id",
+    "connection.password": "password",
+    "tasks.max": "1",
+    "timestamp.delay.interval.ms": "0",
+    "mode": "incrementing",
+    "topic.prefix": "dr-hci-ocp-uat.orders.",
+    "connection.user": "postgres",
+    "poll.interval.ms": "5000",
+    "db.timezone": "Asia/Ho_Chi_Minh",
+    "name": "postgre-source-jdbc-orders",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "connection.url": "jdbc:postgresql://db:5432/orders",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter"
+  }
