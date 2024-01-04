@@ -1,0 +1,18 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+  "incrementing.column.name": "id",
+  "connection.password": "password",
+  "tasks.max": "1",
+  "timestamp.delay.interval.ms": "0",
+  "mode": "incrementing",
+  "value.converter.schema.registry.url": "http://schema-registry:8081",
+  "topic.prefix": "dr-hci-ocp-uat.orders.",
+  "connection.user": "postgres",
+  "poll.interval.ms": "5000",
+  "db.timezone": "Asia/Ho_Chi_Minh",
+  "name": "postgres-source-jdbc-avro-converter",
+  "value.converter": "io.confluent.connect.avro.AvroConverter",
+  "connection.url": "jdbc:postgresql://db:5432/orders",
+  "key.converter": "io.confluent.connect.avro.AvroConverter",
+  "key.converter.schema.registry.url": "http://schema-registry:8081"
+}
