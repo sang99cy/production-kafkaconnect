@@ -12,5 +12,6 @@
     "name": "postgre-source-jdbc-orders",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "connection.url": "jdbc:postgresql://db:5432/orders",
-    "key.converter": "org.apache.kafka.connect.json.JsonConverter"
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    
   }

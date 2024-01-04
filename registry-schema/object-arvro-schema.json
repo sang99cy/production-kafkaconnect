@@ -1,14 +1,23 @@
 {
-    "type": "record",
-    "name": "Test",
-    "fields": [
-      {
-        "name": "id",
-        "type": "long"
-      },
-      {
-        "name": "name",
-        "type": "string"
-      }
-    ]
-  }
+  "type": "record",
+  "name": "test1",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ],
+  "connect.name": "test1"
+}
