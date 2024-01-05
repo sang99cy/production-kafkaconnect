@@ -1,0 +1,8 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+  "mode": "bulk",
+  "connection.password": "U1zprLwn6Jog",
+  "connection.user": "toidayg",
+  "name": "source_connector",
+  "connection.url": "jdbc:postgresql://ep-yellow-sky-44640929.ap-southeast-1.aws.neon.tech/source_db?sslmode=require"
+}

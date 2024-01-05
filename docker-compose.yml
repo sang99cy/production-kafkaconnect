@@ -9,26 +9,26 @@ volumes:
     driver: local
 
 services:
-  db:
-    build:
-      context: ./db
-    ports:
-    - 5432:5432
-    environment:
-    - POSTGRES_DB=orders
-    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=password
+#  db:
+#    build:
+#      context: ./db
+#    ports:
+#    - 5432:5432
+#    environment:
+#    - POSTGRES_DB=orders
+#    - POSTGRES_USER=postgres
+#    - POSTGRES_PASSWORD=password
 
-  mysqldb:
-    build:
-      context: ./mysqldb
-    ports:
-    - 3306:3306
-    environment:
-    - MYSQL_DATABASE=orders
-    - MYSQL_USER=mysql
-    - MYSQL_PASSWORD=password
-    - MYSQL_ROOT_PASSWORD=admin  
+#  mysqldb:
+#    build:
+#      context: ./mysqldb
+#    ports:
+#    - 3306:3306
+#    environment:
+#    - MYSQL_DATABASE=orders
+#    - MYSQL_USER=mysql
+#    - MYSQL_PASSWORD=password
+#    - MYSQL_ROOT_PASSWORD=admin
 
   # # http://localhost:8082/?pgsql=db&username=postgres&db=orders&ns=public
   # adminer:
@@ -92,8 +92,8 @@ services:
       - 9876:9876
     depends_on:
       - schema-registry
-      - db
-      - mysqldb
+#      - db
+#      - mysqldb
     environment:
       CONNECT_BOOTSTRAP_SERVERS: 'kafka:9092'
       CONNECT_GROUP_ID: 'kafka-connect'
