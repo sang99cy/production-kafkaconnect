@@ -1,0 +1,11 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+  "connection.password": "U1zprLwn6Jog",
+  "topics": "test_table_1,test_table_2",
+  "connection.user": "toidayg",
+  "name": "sink_connector",
+  "connection.url": "jdbc:postgresql://ep-yellow-sky-44640929.ap-southeast-1.aws.neon.tech/sink_db?sslmode=require",
+  "insert.mode": "upsert",
+  "pk.mode": "record_value",
+  "pk.fields": "id"
+}
