@@ -91,7 +91,7 @@ services:
       - 9876:9876
     depends_on:
       - schema-registry
-       - db
+      - db
 #      - mysqldb
     environment:
       CONNECT_BOOTSTRAP_SERVERS: 'kafka:9092'

@@ -32,6 +32,15 @@ create table test_table_2
     updated_date timestamp   default CURRENT_TIMESTAMP
 );
 
+CREATE FUNCTION update_updated_at_column() RETURNS trigger
+    LANGUAGE plpgsql
+  AS $$
+  BEGIN
+    NEW.update_ts = NOW();
+    RETURN NEW;
+  END;
+$$;
+
 create trigger t1_updated_at_modtime
     before update
     on test_table_1
