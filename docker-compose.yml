@@ -9,15 +9,15 @@ volumes:
     driver: local
 
 services:
-   db:
-     build:
-       context: ./db
-     ports:
-     - 5432:5432
-     environment:
-     - POSTGRES_DB=source_db
-     - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD=123456
+  db:
+    build:
+      context: ./db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=source_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
 #  mysqldb:
 #    build:
 #      context: ./mysqldb
