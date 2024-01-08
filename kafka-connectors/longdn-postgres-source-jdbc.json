@@ -1,8 +1,24 @@
 {
   "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-  "mode": "bulk",
+  "timestamp.column.name": "updated_date",
+  "incrementing.column.name": "id",
   "connection.password": "U1zprLwn6Jog",
+  "validate.non.null": "false",
+  "catalog.pattern": "public",
+  "batch.max.rows": "100",
+  "table.types": "TABLE",
+  "table.poll.interval.ms": "60000",
+  "table.whitelist": "test_table_1,test_table_2",
+  "mode": " timestamp+incrementing",
+  "key.converter.schemas.enable": "true",
+  "value.converter.schema.registry.url": "http://schema-registry:8081",
   "connection.user": "toidayg",
+  "poll.interval.ms": "5000",
+  "value.converter.schemas.enable": "true",
   "name": "source_connector",
-  "connection.url": "jdbc:postgresql://ep-yellow-sky-44640929.ap-southeast-1.aws.neon.tech/source_db?sslmode=require"
+  "value.converter": "io.confluent.connect.avro.AvroConverter",
+  "connection.url": "jdbc:postgresql://ep-yellow-sky-44640929.ap-southeast-1.aws.neon.tech/source_db?sslmode=require",
+  "config.action.reload": "restart",
+  "key.converter": "io.confluent.connect.avro.AvroConverter",
+  "key.converter.schema.registry.url": "http://schema-registry:8081"
 }

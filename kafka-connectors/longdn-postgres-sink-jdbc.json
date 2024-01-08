@@ -2,10 +2,18 @@
   "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
   "connection.password": "U1zprLwn6Jog",
   "topics": "test_table_1,test_table_2",
+  "table.types": "TABLE",
+  "key.converter.schemas.enable": "true",
+  "value.converter.schema.registry.url": "http://schema-registry:8081",
   "connection.user": "toidayg",
+  "value.converter.schemas.enable": "true",
   "name": "sink_connector",
+  "errors.tolerance": "all",
+  "value.converter": "io.confluent.connect.avro.AvroConverter",
   "connection.url": "jdbc:postgresql://ep-yellow-sky-44640929.ap-southeast-1.aws.neon.tech/sink_db?sslmode=require",
   "insert.mode": "upsert",
+  "key.converter": "io.confluent.connect.avro.AvroConverter",
   "pk.mode": "record_value",
+  "key.converter.schema.registry.url": "http://schema-registry:8081",
   "pk.fields": "id"
 }
