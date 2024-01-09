@@ -36,7 +36,7 @@ CREATE FUNCTION update_updated_at_column() RETURNS trigger
     LANGUAGE plpgsql
   AS $$
   BEGIN
-    NEW.update_ts = NOW();
+    NEW.updated_date = NOW();
     RETURN NEW;
   END;
 $$;
